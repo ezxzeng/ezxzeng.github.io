@@ -1,13 +1,14 @@
 
 @inproceedings{zeng2024decoding,
-  title     = {Decoding Diffusion: A Scalable Framework for Unsupervised Analysis of Latent Space Biases and Representations Using Natural Language Prompts},
+  title     = {SCALEX: Scalable Concept and Latent Exploration for Diffusion Models},
   author    = {Zeng, E Zhixuan and Chen, Yuhao and Wong, Alexander},
-  booktitle = {Neurips Safe Generative AI Workshop 2024},
-  year      = {2024},
-  month     = {Dec.},
-  doi       = {10.48550/arXiv.2410.21314},
-  pdf       = {https://arxiv.org/pdf/2410.21314},
-  abstract  = {Recent advances in image generation have made diffusion models powerful tools for creating high-quality images. However, their iterative denoising process makes understanding and interpreting their semantic latent spaces more challenging than other generative models, such as GANs. Recent methods have attempted to address this issue by identifying semantically meaningful directions within the latent space. However, they often need manual interpretation or are limited in the number of vectors that can be trained, restricting their scope and utility. This paper proposes a novel framework for unsupervised exploration of diffusion latent spaces. We directly leverage natural language prompts and image captions to map latent directions. This method allows for the automatic understanding of hidden features and supports a broader range of analysis without the need to train specific vectors. Our method provides a more scalable and interpretable understanding of the semantic knowledge encoded within diffusion models, facilitating comprehensive analysis of latent biases and the nuanced representations these models learn. Experimental results show that our framework can uncover hidden patterns and associations in various domains, offering new insights into the interpretability of diffusion model latent spaces.},
+  booktitle = {IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  year      = {2026},
+  month     = {Mar.},
+  doi       = {10.48550/arXiv:2511.13750},
+  pdf       = {https://arxiv.org/pdf/2511.13750},
+  abstract  = {Image generation models frequently encode social biases, including stereotypes tied to gender, race, and profession. Existing methods for analyzing these biases in diffusion models either focus narrowly on predefined categories or depend on manual interpretation of latent directions. These constraints limit scalability and hinder the discovery of subtle or unanticipated patterns.
+We introduce SCALEX, a framework for scalable and automated exploration of diffusion model latent spaces. SCALEX extracts semantically meaningful directions from H-space using only natural language prompts, enabling zero-shot interpretation without retraining or labelling. This allows systematic comparison across arbitrary concepts and large-scale discovery of internal model associations. We show that SCALEX detects gender bias in profession prompts, ranks semantic alignment across identity descriptors, and reveals clustered conceptual structure without supervision. By linking prompts to latent directions directly, SCALEX makes bias analysis in diffusion models more scalable, interpretable, and extensible than prior approaches.},
   selected  = True,
   preview   = {food_tsne.png}
 }
