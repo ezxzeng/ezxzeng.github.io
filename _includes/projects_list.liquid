@@ -1,0 +1,76 @@
+{% if include.work %}
+  {% assign projects = site.work %}
+{% else %}
+  {% assign projects = site.projects %}
+{% endif %}
+{% if include.category %}
+  {% assign projects = projects | where: "category", include.category %}
+{% endif %}
+{% if include.selected_only %}
+  {%- assign projects = projects | where: "selected", true -%}
+{% endif %}
+{% if include.sort_importance %}
+  {%- assign sorted_projects = projects | sort: "importance" %}
+{% else %}
+  {%- assign sorted_projects = projects | sort: 'date' | reverse %}
+{% endif %}
+
+<div class="projects-list">
+  <ol class="bibliography">
+    {%- for entry in sorted_projects -%}
+    <li>
+      <div class="row">
+        <div class="col-sm-2 preview">
+        {%- if entry.preview -%}
+          {%- assign img_path = entry.preview -%}
+        {%  elsif entry.img %}
+          {%- assign img_path = entry.img -%}
+        {% else %}
+          {%- assign img_path = nil -%}
+        {% endif %}
+
+        {% if img_path %}
+          {%
+            include figure.liquid
+            loading="eager"
+            path=img_path
+            sizes = "200px"
+            class="preview z-depth-1 rounded"
+            zoomable=true
+            alt=img_path
+          %}
+        {% endif %}
+        </div>
+
+        <!-- Entry bib key -->
+        {% assign entry_id=entry.name | remove: ".md" | remove: ".html" %}
+        <div id="{{ entry_id }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+        
+          <div class="date_string">
+            <em>{{entry.date_string}}</em>
+          </div>
+          <!-- Title -->
+          <div class="title">{{entry.title}}</div>
+          <!-- Description -->
+          <div class="description">{{entry.description | markdownify}}</div>
+
+          <!-- Links/Buttons -->
+          <div class="links">
+            {% for link in entry.links %}
+            <a href="{{ link.url }}" class="btn btn-sm z-depth-0" role="button">{{ link.name }}</a>
+            {% endfor %}
+            {% if entry.related_publications %}
+            <a class="related_publications btn btn-sm z-depth-0" role="button">related publications</a>
+            {% endif %}
+          </div>
+        </div>
+
+          <!-- Publications -->
+          <div class="related_publications hidden">
+            {% bibliography -f {{ site.scholar.bibliography }} --query @*[key^={{ entry.related_publications }}]*  %}
+          </div>
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+</div>

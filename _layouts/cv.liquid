@@ -58,12 +58,13 @@ layout: default
       <h1 class="post-title">
         {{ page.title }}
         {% if page.cv_pdf %}
+          {% if page.cv_pdf contains '://' -%}
+            {% assign pdf_url = page.cv_pdf %}
+          {% else %}
+            {% assign pdf_url = page.cv_pdf | prepend: 'assets/pdf/' | relative_url%}
+          {% endif %}
           <a
-            {% if page.cv_pdf contains '://' %}
-              href="{{ page.cv_pdf }}"
-            {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
-            {% endif %}
+            href="{{ pdf_url }}"
             target="_blank"
             rel="noopener noreferrer"
             class="float-right"

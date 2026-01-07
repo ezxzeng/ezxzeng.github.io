@@ -56,6 +56,22 @@ layout: default
       {% include latest_posts.liquid %}
     {% endif %}
 
+    <!-- Selected work experience-->
+    {% if page.work -%}
+      <h2>
+        <a href="{{ '/work/' | relative_url }}" style="color: inherit;">Work experience</a>
+      </h2>
+      {%- include projects_list.liquid selected_only=true work=true %}
+    {%- endif %}
+
+    <!-- Selected projects -->
+    {% if page.work -%}
+      <h2>
+        <a href="{{ '/projects/' | relative_url }}" style="color: inherit;">Projects</a>
+      </h2>
+      {%- include projects_list.liquid selected_only=true %}
+    {%- endif %}
+
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>

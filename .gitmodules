@@ -1,0 +1,3 @@
+[submodule "Resume"]
+	path = Resume
+	url = git@github.com:ezxzeng/Resume.git
