@@ -132,10 +132,10 @@
   ],
   "publications": [
     {
-      "name": "Decoding Diffusion: A Scalable Framework for Unsupervised Analysis of Latent Space Biases and Representations Using Natural Language Prompts",
-      "publisher": "Neurips Safe Generative AI Workshop 2024",
-      "releaseDate": 2024,
-      "summary": "Measuring biases and visualizing concept clusters through sampling from the H-Space in diffusion models"
+      "name": "SCALEX: Scalable Concept and Latent Exploration for Diffusion Models",
+      "publisher": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+      "releaseDate": "2026",
+      "summary": "Scalable zero-shot analysis of diffusion model H-space that uncovers bias and emergent concept structure via prompt-aligned semantic directions."
     },
     {
       "name": "ShapeShift: Superquadric-based Object Pose Estimation for Robotic Grasping",
