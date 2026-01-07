@@ -7,7 +7,7 @@ job_title: Computer Vision Intern
 image_url: /assets/images/Nvidia_logo.png
 selected: True
 links:
-  - {name: Company Website, url: https://www.nvidia.com/en-us/self-driving-cars/}
+  - { name: Company Website, url: https://www.nvidia.com/en-us/self-driving-cars/ }
 category: work
 preview: assets/img/Nvidia_logo.png
 number: 6

@@ -12,5 +12,5 @@ profiles:
     image: profile.jpg
     content: about_me.md
     image_circular: false # crops the image to make it circular
-    more_info: 
+    more_info:
 ---

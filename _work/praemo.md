@@ -7,8 +7,8 @@ job_title: Junior Data Scientist
 image_url: /assets/images/praemo.jpg
 selected: False
 links:
-  - {name: Company Website, url: https://praemo.com/}
-  - {name: About Company, url: https://www.linkedin.com/company/praemo}
+  - { name: Company Website, url: https://praemo.com/ }
+  - { name: About Company, url: https://www.linkedin.com/company/praemo }
 category: work
 number: 3
 description: >

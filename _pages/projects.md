@@ -28,7 +28,7 @@ min_importance: 5
   <!-- Generate cards for each project -->
   {% if page.horizontal %}
   <div class="container">
-    <div class="row row-cols-2">
+    <div class="row row-cols-1 row-cols-md-2">
     {% for project in sorted_projects %}
       {% if project.importance < page.min_importance %}
       {% include projects_horizontal.liquid %}
@@ -37,7 +37,7 @@ min_importance: 5
     </div>
   </div>
   {% else %}
-  <div class="grid">
+  <div class="row row-cols-1 row-cols-md-3">
     {% for project in sorted_projects %}
       {% if project.importance < page.min_importance %}
       {% include projects.liquid %}
@@ -58,7 +58,7 @@ min_importance: 5
 {% if page.horizontal %}
 
   <div class="container">
-    <div class="row row-cols-2">
+    <div class="row row-cols-1 row-cols-md-2">
     {% for project in sorted_projects %}
       {% if project.importance < page.min_importance %}
       {% include projects_horizontal.liquid %}
@@ -67,7 +67,7 @@ min_importance: 5
     </div>
   </div>
   {% else %}
-  <div class="grid">
+  <div class="row row-cols-1 row-cols-md-3">
     {% for project in sorted_projects %}
       {% if project.importance < page.min_importance %}
       {% include projects.liquid %}
