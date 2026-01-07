@@ -61,7 +61,7 @@ layout: default
           {% if page.cv_pdf contains '://' -%}
             {% assign pdf_url = page.cv_pdf %}
           {% else %}
-            {% assign pdf_url = page.cv_pdf | prepend: 'assets/pdf/' | relative_url%}
+            {% assign pdf_url = page.cv_pdf | prepend: 'assets/pdf/' | relative_url %}
           {% endif %}
           <a
             href="{{ pdf_url }}"

@@ -9,7 +9,7 @@ awards:
   - Best Education Hack
 selected: False
 links:
-  - {name: Devpost, url: https://devpost.com/software/quiz-it}
+  - { name: Devpost, url: https://devpost.com/software/quiz-it }
 importance: 4
 description: Parse photos of text into fill-in-the-blank questions for Alexa skill
 category: hackathon

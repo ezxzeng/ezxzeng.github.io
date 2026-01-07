@@ -7,7 +7,7 @@ job_title: Robotics Software Developer
 image_url: /assets/images/ESI.png
 selected: False
 links:
-  - {name: About Company, url: https://www.linkedin.com/company/esi-toronto}
+  - { name: About Company, url: https://www.linkedin.com/company/esi-toronto }
 category: work
 number: 2
 description: >
